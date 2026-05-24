@@ -6,17 +6,15 @@
 # Output:
 # 4
 # (1,2,3,4)
+
 def longest_consecutive_sequence(nums):
-    nums_set = set(nums)
-    print(nums_set)
-    
+    nums_set = set(nums)    
     max_length = 0
     longest_sequence = []
 
     for i in nums_set:
         # start of sequence
         if i - 1 not in nums_set:
-            print(i)
             current = i
             current_sequence = [current]
 
